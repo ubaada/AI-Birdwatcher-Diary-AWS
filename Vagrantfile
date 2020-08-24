@@ -72,6 +72,8 @@ Vagrant.configure("2") do |config|
     pip3 install pillow
     pip3 install numpy
     pip3 install "https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp36-cp36m-linux_x86_64.whl"
+    pip3 install flask
+    python3 /vagrant/classifier/run-model.py
 
   SHELL
 end
