@@ -1,6 +1,11 @@
 import sys
 import os
 
+# Processes post request to our server
+from flask import Flask
+from flask import request
+
+
 # Image / Matrix processing libraries
 from PIL import Image
 import numpy as np
@@ -47,13 +52,31 @@ def classify_image(img):
     max_ind = np.argmax(output)
     prediction = labels[max_ind]
     prediction.append(output[max_ind]) # add prediction probability
-    return labels[max_ind]
+    return prediction
 
+# Classifies the given file into different bird species
 def classify_file(file_address):
     # Load image
     img = Image.open(file_address)
     return classify_image(img)
     
+
+
+
+# Listens on '/' for an posted image and sends
+app = Flask(__name__)
+@app.route('/', methods=['GET', 'POST'])
+def upload_file():
+    if request.method == 'POST':
+        f = request.files['file']
+        f.save('/tmp/' + f.filename)
+        bird_class = classify_file('/tmp/' + f.filename)
+        print(bird_class)
+        return str(bird_class)
+
+    return "Nothing recieved."
+
+
 if __name__ == "__main__":
     # if a file is passed as arg then classify it and quit
     # ELSE start classifying server
@@ -61,5 +84,6 @@ if __name__ == "__main__":
         # Classify given file and quit
         command = sys.argv[1]
         print(classify_file(command))
-    else:
+    else: 
         print("Starting AI classifier server ...")
+        app.run(host='0.0.0.0', port=4999,debug=True)
