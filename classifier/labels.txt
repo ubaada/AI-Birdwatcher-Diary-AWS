@@ -1,0 +1,965 @@
+Haemorhous cassinii,Cassin's finch
+Aramus guarauna,Limpkin
+Rupornis magnirostris,Roadside hawk
+Cyanocitta cristata,Blue jay
+Cyanocitta stelleri,Steller's jay
+Balearica regulorum,Grey crowned crane
+Pyrocephalus rubinus,Scarlet flycatcher
+Recurvirostra americana,American avocet
+Ardeotis kori,Kori bustard
+Pica nuttalli,Yellow-billed magpie
+Perisoreus canadensis,Canada jay
+Antigone canadensis,Sandhill crane
+Parkesia noveboracensis,Northern waterthrush
+Ardea herodias occidentalis,Great Blue Heron
+Porzana carolina,Sora (bird)
+Anas platyrhynchos diazi,Mexican duck
+Motacilla cinerea,Grey wagtail
+Empidonax difficilis,Pacific-slope flycatcher
+Empidonax minimus,Least flycatcher
+Empidonax fulvifrons,Buff-breasted flycatcher
+Empidonax traillii,Willow flycatcher
+Empidonax hammondii,Hammond's flycatcher
+Empidonax occidentalis,Cordilleran flycatcher
+Rallus limicola,Virginia rail
+Grus grus,Common crane
+Quiscalus major,Boat-tailed grackle
+Branta leucopsis,Barnacle goose
+Cyanocorax yucatanicus,Yucatan jay
+Cyanocorax yncas,Inca jay
+Oceanites oceanicus,Wilson's storm petrel
+Quiscalus niger,Greater Antillean grackle
+Psilorhinus morio,Brown jay
+Megarynchus pitangua,Boat-billed flycatcher
+Gallinula tenebrosa,Dusky moorhen
+Gallus gallus domesticus,Chicken
+Numida meleagris,Helmeted guineafowl
+Junco hyemalis caniceps,Dark-eyed Junco 
+Tyrannus vociferans,Cassin's kingbird
+Tyrannus tyrannus,Eastern kingbird
+Tyrannus forficatus,Scissor-tailed flycatcher
+Tyrannus crassirostris,Thick-billed kingbird
+Tyrannus verticalis,Western kingbird
+Tyrannus savana,Fork-tailed flycatcher
+Gallirallus australis,Weka
+Calocitta formosa,White-throated magpie-jay
+Calocitta colliei,Black-throated magpie-jay
+Fulica americana,American coot
+Pachyramphus aglaiae,Rose-throated becard
+Buteo lagopus,Rough-legged buzzard
+Cygnus atratus,Black swan
+Philesturnus rufusater,North Island saddleback
+Larus marinus,Great black-backed gull
+Pitangus sulphuratus,Great kiskadee
+Anas rubripes,American black duck
+Anthus novaeseelandiae novaeseelandiae,Australasian pipit
+Sayornis phoebe,Eastern phoebe
+Sayornis nigricans,Black phoebe
+Tityra semifasciata,Masked tityra
+Dryocopus lineatus,Lineated woodpecker
+Porphyrio melanotus,Australasian swamphen
+Anas bahamensis,White-cheeked pintail
+Egretta novaehollandiae,White-faced heron
+Anas crecca carolinensis,Green-winged teal
+Alectoris chukar,Chukar partridge
+Tachybaptus dominicus,Least grebe
+Artemisiospiza belli,Bell's sparrow
+Gallus gallus,Red junglefowl
+Cardinalis sinuatus,Pyrrhuloxia
+Cardinalis cardinalis,Northern cardinal
+Melospiza lincolnii,Lincoln's sparrow
+Podilymbus podiceps,Pied-billed grebe
+Melospiza georgiana,Swamp sparrow
+Meleagris gallopavo,Wild turkey
+Meleagris ocellata,Ocellated turkey
+Lagopus lagopus,Willow ptarmigan
+Spizella atrogularis,Black-chinned sparrow
+Pyrrhocorax graculus,Alpine chough
+Spizella breweri,Brewer's sparrow
+Sialia currucoides,Mountain bluebird
+Spizella pusilla,Field sparrow
+Anas superciliosa,Pacific black duck
+Passerella iliaca,Fox sparrow
+Phoenicopterus ruber,American flamingo
+Sylvia atricapilla,Eurasian blackcap
+Vireo bellii,Bell's vireo
+Vireo plumbeus,Plumbeous vireo
+Vireo philadelphicus,Philadelphia vireo
+Vireo flavifrons,Yellow-throated vireo
+Vireo olivaceus,Red-eyed vireo
+Zonotrichia querula,Harris's sparrow
+Vireo huttoni,Hutton's vireo
+Zonotrichia albicollis,White-throated sparrow
+Zonotrichia atricapilla,Golden-crowned sparrow
+Emberiza citrinella,Yellowhammer
+Bucephala islandica,Barrow's goldeneye
+Emberiza schoeniclus,Common reed bunting
+Vireo gilvus,Warbling vireo
+Serinus serinus,European serin
+Serinus mozambicus,Yellow-fronted canary
+Lophura leucomelanos,Kalij pheasant
+Euphonia elegantissima,Elegant euphonia
+Euphonia hirundinacea,Yellow-throated euphonia
+Euphonia affinis,Scrub euphonia
+Agelaius tricolor,Tricolored blackbird
+Momotus lessonii,Lesson's motmot
+Zosterops japonicus,Warbling white-eye
+Phalacrocorax pelagicus,Pelagic cormorant
+Icterus cucullatus,Hooded oriole
+Icterus graduacauda,Audubon's oriole
+Motacilla aguimp,African pied wagtail
+Anas superciliosa platyrhynchos,Anas superciliosa platyrhynchos --
+Icterus pustulatus,Streak-backed oriole
+Icterus gularis,Altamira oriole
+Carduelis cannabina,Common linnet
+Catharus minimus,Grey-cheeked thrush
+Amaurornis phoenicurus,White-breasted waterhen
+Pavo cristatus,Indian peafowl
+Rallus crepitans,Clapper rail
+Nestor meridionalis septentrionalis,New Zealand kaka
+Pipilo chlorurus,Green-tailed towhee
+Pipilo maculatus,Spotted towhee
+Pipilo erythrophthalmus,Eastern towhee
+Cairina moschata domestica,Domestic muscovy duck
+Phalacrocorax varius,Australian pied cormorant
+Picoides dorsalis,American three-toed woodpecker
+Picoides nuttallii,Nuttall's woodpecker
+Picoides scalaris,Ladder-backed woodpecker
+Callipepla gambelii,Gambel's quail
+Pyrrhula pyrrhula,Eurasian bullfinch
+Phalacrocorax brasilianus,Neotropic cormorant
+Picoides pubescens,Downy woodpecker
+Colinus virginianus,Northern bobwhite
+Sporophila torqueola,Cinnamon-rumped seedeater
+Picoides villosus,Hairy woodpecker
+Calidris pusilla,Semipalmated sandpiper
+Picoides arcticus,Black-backed woodpecker
+Aythya marila,Greater scaup
+Phaethon aethereus,Red-billed tropicbird
+Sturnella magna,Eastern meadowlark
+Melopsittacus undulatus,Budgerigar
+Aythya affinis,Lesser scaup
+Aythya novaeseelandiae,New Zealand scaup
+Cyrtonyx montezumae,Montezuma quail
+Pelecanus occidentalis,Brown pelican
+Cinclus cinclus,White-throated dipper
+Chen rossii,Ross's goose
+Callipepla californica,California quail
+Quiscalus quiscula,Common grackle
+Quiscalus mexicanus,Great-tailed grackle
+Callipepla squamata,Scaled quail
+Dryocopus pileatus,Pileated woodpecker
+Passerina caerulea,Blue grosbeak
+Amazilia beryllina,Berylline hummingbird
+Geothlypis trichas,Common yellowthroat
+Trogon melanocephalus,Black-headed trogon
+Sylvia communis,Common whitethroat
+Pinicola enucleator,Pine grosbeak
+Coccothraustes vespertinus,Evening grosbeak
+Coccothraustes coccothraustes,Hawfinch
+Vermivora chrysoptera,Golden-winged warbler
+Opisthocomus hoazin,Hoatzin
+Setophaga coronata coronata,Yellow-rumped warbler
+Diglossa baritula,Cinnamon-bellied flowerpiercer
+Saltator coerulescens,Greyish saltator
+Saltator atriceps,Black-headed saltator
+Sicalis flaveola,Saffron finch
+Aix galericulata,Mandarin duck
+Junco hyemalis hyemalis,Alaskan Dark-eyed Junco
+Eupsittula canicularis,Orange-fronted parakeet
+Microcarbo melanoleucos,Little pied cormorant
+Piranga rubra,Summer tanager
+Piranga olivacea,Scarlet tanager
+Piranga flava,Hepatic tanager
+Amphispiza bilineata,Black-throated sparrow
+Larus dominicanus,Kelp gull
+Piaya cayana,Squirrel cuckoo
+Aimophila ruficeps,Rufous-crowned sparrow
+Melanerpes lewis,Lewis's woodpecker
+Melanerpes uropygialis,Gila woodpecker
+Passerculus sandwichensis,Savannah sparrow
+Melanerpes pucherani,Black-cheeked woodpecker
+Salpinctes obsoletus,Rock wren
+Melanerpes carolinus,Red-bellied woodpecker
+Melanerpes chrysogenys,Golden-cheeked woodpecker
+Melanerpes formicivorus,Acorn woodpecker
+Colaptes auratus,Northern flicker
+Basileuterus rufifrons,Rufous-capped warbler
+Larus michahellis,Yellow-legged gull
+Ramphocelus passerinii,Scarlet-rumped tanager
+Athene cunicularia,Burrowing owl
+Branta hutchinsii,Cackling goose
+Fringilla montifringilla,Brambling
+Fringilla coelebs,Common chaffinch
+Junco hyemalis,Dark-eyed junco
+Cuculus canorus,Common cuckoo
+Junco phaeonotus,Yellow-eyed junco
+Ammodramus nelsoni,Nelson's sparrow
+Ammodramus savannarum,Grasshopper sparrow
+Ammodramus maritimus,Seaside sparrow
+Coccyzus erythropthalmus,Black-billed cuckoo
+Coccyzus minor,Mangrove cuckoo
+Coccyzus americanus,Yellow-billed cuckoo
+Nucifraga columbiana,Clark's nutcracker
+Crotophaga sulcirostris,Groove-billed ani
+Pooecetes gramineus,Vesper sparrow
+Arremonops rufivirgatus,Olive sparrow
+Geococcyx californianus,Greater roadrunner
+Geococcyx velox,Lesser roadrunner
+Coereba flaveola,Bananaquit
+Passerina ciris,Painted bunting
+Alectura lathami,Australian brushturkey
+Passerina leclancherii,Orange-breasted bunting
+Passerina amoena,Lazuli bunting
+Icteria virens,Yellow-breasted chat
+Crax rubra,Great curassow
+Penelope purpurascens,Crested guan
+Copsychus malabaricus,White-rumped shama
+Paroaria capitata,Yellow-billed cardinal
+Cyanerpes cyaneus,Red-legged honeycreeper
+Microcarbo melanoleucos brevirostris,Little pied cormorant
+Sphyrapicus thyroideus,Williamson's sapsucker
+Pheucticus ludovicianus,Rose-breasted grosbeak
+Sphyrapicus ruber,Red-breasted sapsucker
+Pheucticus melanocephalus,Black-headed grosbeak
+Sphyrapicus nuchalis,Red-naped sapsucker
+Ortalis poliocephala,West Mexican chachalaca
+Ortalis vetula,Plain chachalaca
+Corvus albus,Pied crow
+Mniotilta varia,Black-and-white warbler
+Volatinia jacarina,Blue-black grassquit
+Thraupis palmarum,Palm tanager
+Momotus mexicanus,Russet-crowned motmot
+Euphagus cyanocephalus,Brewer's blackbird
+Cacatua galerita,Sulphur-crested cockatoo
+Junco hyemalis oreganus,Dark-eyed Junco (Oregon)
+Pluvialis fulva,Pacific golden plover
+Molothrus aeneus,Bronzed cowbird
+Molothrus ater,Brown-headed cowbird
+Merops pusillus,Little bee-eater
+Merops apiaster,European bee-eater
+Pteroglossus torquatus,Collared aracari
+Loxia curvirostra,Red crossbill
+Merops orientalis,Green bee-eater
+Loxia leucoptera,Two-barred crossbill
+Coracias garrulus,European roller
+Coracias caudatus,Lilac-breasted roller
+Coracias benghalensis,Indian roller
+Xanthocephalus xanthocephalus,Yellow-headed blackbird
+Chondestes grammacus,Lark sparrow
+Dolichonyx oryzivorus,Bobolink
+Pandion haliaetus,Osprey
+Phainopepla nitens,Phainopepla
+Tyrannus couchii,Couch's kingbird
+Phylloscopus collybita,Common chiffchaff
+Circus cyaneus hudsonius,Northern harrier
+Grallina cyanoleuca,Magpie-lark
+Plectrophenax nivalis,Snow bunting
+Calamospiza melanocorys,Lark bunting
+Regulus calendula,Ruby-crowned kinglet
+Regulus ignicapilla,Common firecrest
+Regulus regulus,Goldcrest
+Regulus satrapa,Golden-crowned kinglet
+Tyrannus melancholicus,Tropical kingbird
+Pelecanus conspicillatus,Australian pelican
+Aulacorhynchus prasinus,Emerald toucanet
+Todiramphus sanctus,Sacred kingfisher
+Icterus bullockii,Bullock's oriole
+Spiza americana,Dickcissel
+Tyrannus dominicensis,Gray kingbird
+Chlidonias niger,Black tern
+Oriturus superciliosus,Striped sparrow
+Psarocolius montezuma,Montezuma oropendola
+Turdus pilaris,Fieldfare
+Notiomystis cincta,Stitchbird
+Sagittarius serpentarius,Secretarybird
+Psittacula krameri,Rose-ringed parakeet
+Platycercus eximius,Eastern rosella
+Protonotaria citrea,Prothonotary warbler
+Megaceryle torquata,Ringed kingfisher
+Nestor meridionalis,New Zealand kaka
+Amazona viridigenalis,Red-crowned amazon
+Amazona albifrons,White-fronted amazon
+Amazona oratrix,Yellow-headed amazon
+Saxicola rubetra,Whinchat
+Ara militaris,Military macaw
+Spizelloides arborea,American tree sparrow
+Ceryle rudis,Pied kingfisher
+Chloroceryle aenea,American pygmy kingfisher
+Chloroceryle amazona,Amazon kingfisher
+Myiozetetes similis,Social flycatcher
+Toxostoma curvirostre,Curve-billed thrasher
+Megaceryle alcyon,Belted kingfisher
+Eremophila alpestris,Horned lark
+Alisterus scapularis,Australian king parrot
+Cinnyris jugularis,Olive-backed sunbird
+Xiphorhynchus flavigaster,Ivory-billed woodcreeper
+Jacana jacana,Wattled jacana
+Phalaropus fulicarius,Red phalarope
+Streptopelia turtur,European turtle dove
+Pica hudsonia,Black-billed magpie
+Corvus cornix,Hooded crow
+Myiopsitta monachus,Monk parakeet
+Streptopelia decaocto,Eurasian collared dove
+Piranga ludoviciana,Western tanager
+Ixobrychus exilis,Least bittern
+Auriparus flaviceps,Verdin
+Geothlypis tolmiei,MacGillivray's warbler
+Columba livia,Rock dove
+Setophaga citrina,Hooded warbler
+Setophaga cerulea,Cerulean warbler
+Columba palumbus,Common wood pigeon
+Piranga bidentata,Flame-colored tanager
+Patagioenas leucocephala,White-crowned pigeon
+Patagioenas fasciata,Band-tailed pigeon
+Patagioenas flavirostris,Red-billed pigeon
+Setophaga discolor,Prairie warbler
+Chordeiles minor,Common nighthawk
+Chordeiles acutipennis,Lesser nighthawk
+Platalea leucorodia,Eurasian spoonbill
+Phalaenoptilus nuttallii,Common poorwill
+Haemorhous mexicanus,House finch
+Haemorhous purpureus,Purple finch
+Nyctidromus albicollis,Pauraque
+Campephilus guatemalensis,Pale-billed woodpecker
+Toxostoma rufum,Brown thrasher
+Leptotila verreauxi,White-tipped dove
+Nyctibius jamaicensis,Northern potoo
+Anas penelope,Eurasian wigeon
+Buteo plagiatus,Gray hawk
+Selasphorus calliope,Calliope hummingbird
+Megascops kennicottii,Western screech owl
+Porphyrio poliocephalus,Grey-headed swamphen
+Megascops asio,Eastern screech owl
+Zenaida auriculata,Eared dove
+Hymenolaimus malacorhynchos,Blue duck
+Setophaga caerulescens,Black-throated blue warbler
+Camptostoma imberbe,Northern beardless tyrannulet
+Caracara plancus,Southern crested caracara
+Columbina passerina,Common ground dove
+Eupsittula nana,Olive-throated parakeet
+Nestor notabilis,Kea
+Columbina talpacoti,Ruddy ground dove
+Geopelia striata,Zebra dove
+Athene noctua,Little owl
+Crotophaga ani,Smooth-billed ani
+Sialia sialis,Eastern bluebird
+Platalea alba,African spoonbill
+Bubo virginianus,Great horned owl
+Petrochelidon fulva,Cave swallow
+Progne subis,Purple martin
+Setophaga coronata auduboni,Audubon's warbler
+Hirundo neoxena,Welcome swallow
+Hirundo rustica,Barn swallow
+Calidris virgata,Surfbird
+Calidris pugnax,Ruff (bird)
+Platalea regia,Royal spoonbill
+Tachycineta thalassina,Violet-green swallow
+Bostrychia hagedash,Hadada ibis
+Riparia riparia,Sand martin
+Eudocimus albus,American white ibis
+Plegadis falcinellus,Glossy ibis
+Plegadis chihi,White-faced ibis
+Corvus corax,Common raven
+Stelgidopteryx serripennis,Northern rough-winged swallow
+Sula dactylatra,Masked booby
+Sula sula,Red-footed booby
+Sula leucogaster,Brown booby
+Morus serrator,Australasian gannet
+Eudyptula minor,Little penguin
+Megadyptes antipodes,Yellow-eyed penguin
+Scopus umbretta,Hamerkop
+Troglodytes troglodytes,Eurasian wren
+Calidris canutus,Red knot
+Lanius collurio,Red-backed shrike
+Calidris bairdii,Baird's sandpiper
+Meleagris gallopavo intermedia,Wild turkey
+Calidris mauri,Western sandpiper
+Calidris maritima,Purple sandpiper
+Calidris alpina,Dunlin
+Calidris ferruginea,Curlew sandpiper
+Calidris melanotos,Pectoral sandpiper
+Limnodromus griseus,Short-billed dowitcher
+Malurus cyaneus,Superb fairywren
+Tringa nebularia,Common greenshank
+Todiramphus sanctus vagans,Sacred kingfisher
+Tringa ochropus,Green sandpiper
+Tringa glareola,Wood sandpiper
+Tringa melanoleuca,Greater yellowlegs
+Tringa flavipes,Lesser yellowlegs
+Numenius arquata,Eurasian curlew
+Numenius phaeopus,Eurasian whimbrel
+Phalacrocorax carbo novaehollandiae,Phalacrocorax carbo novaehollandiae --
+Petroica macrocephala macrocephala,Petroica macrocephala macrocephala --
+Petroica australis longipes,Petroica australis longipes --
+Prosthemadera novaeseelandiae novaeseelandiae,Tui (bird)
+Asio flammeus,Short-eared owl
+Rhipidura fuliginosa fuliginosa,New Zealand fantail
+Scolopax minor,American woodcock
+Arenaria interpres,Ruddy turnstone
+Arenaria melanocephala,Black turnstone
+Rhipidura fuliginosa placabilis,Rhipidura fuliginosa placabilis --
+Limosa limosa,Black-tailed godwit
+Limosa haemastica,Hudsonian godwit
+Limosa fedoa,Marbled godwit
+Phalaropus lobatus,Red-necked phalarope
+Bartramia longicauda,Upland sandpiper
+Limosa lapponica,Bar-tailed godwit
+Aegolius acadicus,Northern saw-whet owl
+Actitis hypoleucos,Common sandpiper
+Trichoglossus haematodus,Coconut lorikeet
+Surnia ulula,Northern hawk-owl
+Polioptila caerulea,Blue-gray gnatcatcher
+Spizella passerina,Chipping sparrow
+Pycnonotus jocosus,Red-whiskered bulbul
+Passerina cyanea,Indigo bunting
+Passerina versicolor,Varied bunting
+Manorina melanocephala,Noisy miner
+Ocyphaps lophotes,Crested pigeon
+Jabiru mycteria,Jabiru
+Pycnonotus cafer,Red-vented bulbul
+Anser cygnoides domesticus,Anser cygnoides domesticus --
+Picus viridis,European green woodpecker
+Phoebastria nigripes,Black-footed albatross
+Struthio camelus,Common ostrich
+Phoebastria immutabilis,Laysan albatross
+Fulmarus glacialis,Northern fulmar
+Francolinus pondicerianus,Grey francolin
+Cynanthus latirostris,Broad-billed hummingbird
+Podiceps nigricollis,Black-necked grebe
+Podiceps cristatus,Great crested grebe
+Podiceps auritus,Horned grebe
+Dendrocopos major,Great spotted woodpecker
+Podiceps grisegena,Red-necked grebe
+Tachybaptus ruficollis,Little grebe
+Charadrius montanus,Mountain plover
+Phalacrocorax auritus,Double-crested cormorant
+Phalacrocorax carbo,Great cormorant
+Phalacrocorax penicillatus,Brandt's cormorant
+Aechmophorus clarkii,Clark's grebe
+Pelecanus onocrotalus,Great white pelican
+Pelecanus erythrorhynchos,American white pelican
+Zenaida macroura,Mourning dove
+Vanellus miles,Masked lapwing
+Larus occidentalis,Western gull
+Trogon massena,Slaty-tailed trogon
+Larus thayeri,Thayer's gull
+Larus heermanni,Heermann's gull
+Larus livens,Yellow-footed gull
+Larus canus,Common gull
+Larus glaucoides,Iceland gull
+Larus delawarensis,Ring-billed gull
+Trogon collaris,Collared trogon
+Zenaida asiatica,White-winged dove
+Larus fuscus,Lesser black-backed gull
+Larus californicus,California gull
+Prosthemadera novaeseelandiae,Tui (bird)
+Trogon elegans,Elegant trogon
+Larus glaucescens,Glaucous-winged gull
+Trogon citreolus,Citreoline trogon
+Cepphus columba,Pigeon guillemot
+Himantopus leucocephalus,Pied stilt
+Cepphus grylle,Black guillemot
+Anthornis melanura,New Zealand bellbird
+Leptoptilos crumenifer,Marabou stork
+Threskiornis moluccus,Australian white ibis
+Thraupis episcopus,Blue-gray tanager
+Geranoaetus albicaudatus,White-tailed hawk
+Sterna paradisaea,Arctic tern
+Sterna hirundo,Common tern
+Sterna forsteri,Forster's tern
+Lanius excubitor,Great grey shrike
+Pharomachrus mocinno,Resplendent quetzal
+Sterna striata,White-fronted tern
+Stercorarius parasiticus,Parasitic jaeger
+Stercorarius pomarinus,Pomarine jaeger
+Anas gracilis,Grey teal
+Rissa tridactyla,Black-legged kittiwake
+Rynchops niger,Black skimmer
+Alca torda,Razorbill
+Fratercula arctica,Atlantic puffin
+Fratercula cirrhata,Tufted puffin
+Turdus merula,Common blackbird
+Turdus plumbeus,Red-legged thrush
+Turdus grayi,Clay-colored thrush
+Turdus migratorius,American robin
+Turdus viscivorus,Mistle thrush
+Cerorhinca monocerata,Rhinoceros auklet
+Turdus philomelos,Song thrush
+Galbula ruficauda,Rufous-tailed jacamar
+Jacana spinosa,Northern jacana
+Saxicola rubicola,European stonechat
+Upupa epops,Eurasian hoopoe
+Euphagus carolinus,Rusty blackbird
+Gavia pacifica,Pacific loon
+Mimus gilvus,Tropical mockingbird
+Passer italiae,Italian sparrow
+Gavia immer,Common loon
+Gavia stellata,Red-throated loon
+Oenanthe oenanthe,Northern wheatear
+Fregata magnificens,Magnificent frigatebird
+Fregata minor,Great frigatebird
+Falco subbuteo,Eurasian hobby
+Falco mexicanus,Prairie falcon
+Falco femoralis,Aplomado falcon
+Falco peregrinus,Peregrine falcon
+Falco rufigularis,Bat falcon
+Falco sparverius,American kestrel
+Strix varia,Barred owl
+Falco columbarius,Merlin (bird)
+Gallinula chloropus,Common moorhen
+Cardellina pusilla,Wilson's warbler
+Catharus ustulatus,Swainson's thrush
+Falco novaeseelandiae,New Zealand falcon
+Catharus guttatus,Hermit thrush
+Catharus fuscescens,Veery
+Caracara cheriway,Northern crested caracara
+Herpetotheres cachinnans,Laughing falcon
+Calcarius lapponicus,Lapland longspur
+Milvago chimachima,Yellow-headed caracara
+Ciconia ciconia,White stork
+Mycteria americana,Wood stork
+Mycteria ibis,Yellow-billed stork
+Sialia mexicana,Western bluebird
+Ephippiorhynchus senegalensis,Saddle-billed stork
+Cathartes aura,Turkey vulture
+Myadestes townsendi,Townsend's solitaire
+Cathartes burrovianus,Lesser yellow-headed vulture
+Sarcoramphus papa,King vulture
+Coragyps atratus,Black vulture
+Strix nebulosa,Great grey owl
+Anastomus lamelligerus,African openbill
+Pluvialis squatarola,Grey plover
+Gymnogyps californianus,California condor
+Muscicapa striata,Spotted flycatcher
+Charadrius vociferus,Killdeer
+Charadrius wilsonia,Wilson's plover
+Charadrius melodus,Piping plover
+Phoenicurus phoenicurus,Common redstart
+Phoenicurus ochruros,Black redstart
+Charadrius dubius,Little ringed plover
+Eumomota superciliosa,Turquoise-browed motmot
+Anas querquedula,Garganey
+Himantopus mexicanus,Black-necked stilt
+Haematopus bachmani,Black oystercatcher
+Pica pica,Eurasian magpie
+Haematopus ostralegus,Eurasian oystercatcher
+Haematopus unicolor,Variable oystercatcher
+Vanellus vanellus,Northern lapwing
+Vanellus spinosus,Spur-winged lapwing
+Vanellus armatus,Blacksmith lapwing
+Luscinia svecica,Bluethroat
+Columbina inca,Inca dove
+Recurvirostra avosetta,Pied avocet
+Phasianus colchicus,Common pheasant
+Pluvialis dominica,American golden plover
+Cinclus mexicanus,American dipper
+Erithacus rubecula,European robin
+Melanerpes aurifrons,Golden-fronted woodpecker
+Charadrius hiaticula,Common ringed plover
+Egretta gularis,Western reef heron
+Egretta caerulea,Little blue heron
+Egretta tricolor,Tricolored heron
+Egretta thula,Snowy egret
+Egretta garzetta,Little egret
+Egretta sacra,Pacific reef heron
+Monticola solitarius,Blue rock thrush
+Ardea cocoi,Cocoi heron
+Ardea cinerea,Grey heron
+Ardea herodias,Great blue heron
+Nycticorax nycticorax,Black-crowned night heron
+Turdus rufopalliatus,Rufous-backed thrush
+Ardeola ralloides,Squacco heron
+Nyctanassa violacea,Yellow-crowned night heron
+Aramides cajaneus,Grey-cowled wood rail
+Bubulcus ibis,Western cattle egret
+Butorides virescens,Green heron
+Porphyrio martinicus,American purple gallinule
+Botaurus lentiginosus,American bittern
+Cochlearius cochlearius,Boat-billed heron
+Anhinga novaehollandiae,Australasian darter
+Anhinga rufa,African darter
+Melozone fusca,Canyon towhee
+Aquila chrysaetos,Golden eagle
+Hylocichla mustelina,Wood thrush
+Aphelocoma wollweberi,Mexican jay
+Accipiter striatus,Sharp-shinned hawk
+Accipiter nisus,Eurasian sparrowhawk
+Accipiter gentilis,Northern goshawk
+Egretta rufescens,Reddish egret
+Bucephala clangula,Common goldeneye
+Anous stolidus,Brown noddy
+Actitis macularius,Spotted sandpiper
+Ardea purpurea,Purple heron
+Todiramphus chloris,Collared kingfisher
+Grus americana,Whooping crane
+Himantopus himantopus,Black-winged stilt
+Glaucidium gnoma,Mountain pygmy owl
+Circus approximans,Swamp harrier
+Circus aeruginosus,Western marsh harrier
+Phalacrocorax sulcirostris,Little black cormorant
+Buteo albonotatus,Zone-tailed hawk
+Butorides striata,Striated heron
+Platalea ajaja,Roseate spoonbill
+Buteo brachyurus,Short-tailed hawk
+Ardea alba,Great egret
+Buteo swainsoni,Swainson's hawk
+Alectoris rufa,Red-legged partridge
+Buteo lineatus,Red-shouldered hawk
+Buteo jamaicensis,Red-tailed hawk
+Charadrius nivosus,Snowy plover
+Tringa incana,Wandering tattler
+Tringa semipalmata,Willet
+Terathopius ecaudatus,Bateleur
+Gallinago delicata,Wilson's snipe
+Buteogallus anthracinus,Common black hawk
+Chroicocephalus philadelphia,Bonaparte's gull
+Circaetus gallicus,Short-toed snake eagle
+Chroicocephalus novaehollandiae,Silver gull
+Chroicocephalus ridibundus,Black-headed gull
+Leucophaeus atricilla,Laughing gull
+Leucophaeus pipixcan,Franklin's gull
+Onychoprion fuscatus,Sooty tern
+Sternula antillarum,Least tern
+Hydroprogne caspia,Caspian tern
+Thalasseus maximus,Royal tern
+Thalasseus bergii,Greater crested tern
+Elanus leucurus,White-tailed kite
+Alopochen aegyptiaca,Egyptian goose
+Streptopelia senegalensis,Laughing dove
+Gerygone igata,Grey warbler
+Haliaeetus leucocephalus,Bald eagle
+Cistothorus platensis,Grass wren
+Haliaeetus vocifer,African fish eagle
+Bubo scandiacus,Snowy owl
+Ciccaba virgata,Mottled owl
+Bonasa umbellus,Ruffed grouse
+Busarellus nigricollis,Black-collared hawk
+Rostrhamus sociabilis,Snail kite
+Milvus milvus,Red kite
+Gyps fulvus,Griffon vulture
+Ficedula hypoleuca,European pied flycatcher
+Momotus coeruliceps,Blue-capped motmot
+Charadrius semipalmatus,Semipalmated plover
+Haliastur indus,Brahminy kite
+Gyps africanus,White-backed vulture
+Ictinia mississippiensis,Mississippi kite
+Dives dives,Melodious blackbird
+Baeolophus atricristatus,Black-crested titmouse
+Baeolophus bicolor,Tufted titmouse
+Baeolophus inornatus,Oak titmouse
+Melospiza melodia,Song sparrow
+Spinus spinus,Eurasian siskin
+Motacilla alba,White wagtail
+Certhia americana,Brown creeper
+Bucorvus leadbeateri,Southern ground hornbill
+Anthus pratensis,Meadow pipit
+Anthus rubescens,Buff-bellied pipit
+Tachycineta albilinea,Mangrove swallow
+Poecile carolinensis,Carolina chickadee
+Poecile atricapillus,Black-capped chickadee
+Poecile gambeli,Mountain chickadee
+Poecile rufescens,Chestnut-backed chickadee
+Periparus ater,Coal tit
+Chlorophanes spiza,Green honeycreeper
+Estrilda astrild,Common waxbill
+Cyanistes caeruleus,Eurasian blue tit
+Sphyrapicus varius,Yellow-bellied sapsucker
+Petrochelidon pyrrhonota,American cliff swallow
+Troglodytes pacificus,Pacific wren
+Troglodytes hiemalis,Winter wren
+Passer montanus,Eurasian tree sparrow
+Passer domesticus,House sparrow
+Aphelocoma californica,California scrub jay
+Amazilia yucatanensis,Buff-bellied hummingbird
+Amazilia tzacatl,Rufous-tailed hummingbird
+Dicrurus adsimilis,Fork-tailed drongo
+Amazilia violiceps,Violet-crowned hummingbird
+Lonchura punctulata,Scaly-breasted munia
+Tigrisoma mexicanum,Bare-throated tiger heron
+Porphyrio melanotus melanotus,Porphyrio melanotus melanotus --
+Melanitta americana,Black scoter
+Spizella pallida,Clay-colored sparrow
+Amazilia rutila,Cinnamon hummingbird
+Zenaida aurita,Zenaida dove
+Prunella modularis,Dunnock
+Falco tinnunculus,Common kestrel
+Ixoreus naevius,Varied thrush
+Archilochus colubris,Ruby-throated hummingbird
+Lampornis clemenciae,Blue-throated mountaingem
+Myiarchus tuberculifer,Dusky-capped flycatcher
+Setophaga ruticilla,American redstart
+Myiarchus tyrannulus,Brown-crested flycatcher
+Zosterops lateralis,Silvereye
+Zonotrichia leucophrys,White-crowned sparrow
+Agelaius phoeniceus,Red-winged blackbird
+Parus major,Great tit
+Zonotrichia capensis,Rufous-collared sparrow
+Oreothlypis peregrina,Tennessee warbler
+Oreothlypis celata,Orange-crowned warbler
+Oreothlypis ruficapilla,Nashville warbler
+Geothlypis philadelphia,Mourning warbler
+Geothlypis formosa,Kentucky warbler
+Setophaga tigrina,Cape May warbler
+Setophaga americana,Northern parula
+Setophaga magnolia,Magnolia warbler
+Setophaga castanea,Bay-breasted warbler
+Setophaga fusca,Blackburnian warbler
+Setophaga petechia,American yellow warbler
+Setophaga striata,Blackpoll warbler
+Setophaga palmarum,Palm warbler
+Setophaga pinus,Pine warbler
+Setophaga coronata,Yellow-rumped warbler
+Setophaga dominica,Yellow-throated warbler
+Campylopterus hemileucurus,Violet sabrewing
+Vireo cassinii,Cassin's vireo
+Setophaga nigrescens,Black-throated gray warbler
+Setophaga townsendi,Townsend's warbler
+Setophaga occidentalis,Hermit warbler
+Setophaga chrysoparia,Golden-cheeked warbler
+Setophaga virens,Black-throated green warbler
+Cardellina canadensis,Canada warbler
+Cardellina rubra,Red warbler
+Aphelocoma coerulescens,Florida scrub jay
+Melanerpes erythrocephalus,Red-headed woodpecker
+Emberiza calandra,Corn bunting
+Acanthis flammea,Common redpoll
+Spinus pinus,Pine siskin
+Thraupis abbas,Yellow-winged tanager
+Spinus psaltria,Lesser goldfinch
+Spinus lawrencei,Lawrence's goldfinch
+Spinus tristis,American goldfinch
+Threskiornis aethiopicus,African sacred ibis
+Gygis alba,White tern
+Tachycineta bicolor,Tree swallow
+Larus dominicanus dominicanus,Kelp gull
+Lonchura oryzivora,Java sparrow
+Haematopus palliatus,American oystercatcher
+Chloris chloris,European greenfinch
+Accipiter cooperii,Cooper's hawk
+Vireo solitarius,Blue-headed vireo
+Selasphorus platycercus,Broad-tailed hummingbird
+Chroicocephalus scopulinus,Red-billed gull
+Aechmophorus occidentalis,Western grebe
+Hemiphaga novaeseelandiae,Kererū
+Xema sabini,Sabine's gull
+Ramphastos sulfuratus,Keel-billed toucan
+Dacelo novaeguineae,Laughing kookaburra
+Fulica atra,Eurasian coot
+Hirundo rustica erythrogaster,Hirundo rustica erythrogaster --
+Calypte costae,Costa's hummingbird
+Calypte anna,Anna's hummingbird
+Colaptes auratus cafer,Northern flicker
+Sula nebouxii,Blue-footed booby
+Copsychus saularis,Oriental magpie-robin
+Selasphorus sasin,Allen's hummingbird
+Selasphorus rufus,Rufous hummingbird
+Calothorax lucifer,Lucifer sheartail
+Pycnonotus barbatus,Common bulbul
+Larus glaucescens occidentalis,Larus glaucescens occidentalis --
+Aphelocoma woodhouseii,Woodhouse's scrub jay
+Florisuga mellivora,White-necked jacobin
+Haematopus finschi,South Island oystercatcher
+Falcipennis canadensis,Spruce grouse
+Archilochus alexandri,Black-chinned hummingbird
+Circus cyaneus,Hen harrier
+Ardea alba modesta,Eastern great egret
+Myiarchus crinitus,Great crested flycatcher
+Buteo regalis,Ferruginous hawk
+Aeronautes saxatalis,White-throated swift
+Chaetura vauxi,Vaux's swift
+Chaetura pelagica,Chimney swift
+Setophaga pensylvanica,Chestnut-sided warbler
+Lanius ludovicianus,Loggerhead shrike
+Anhinga anhinga,Anhinga
+Acridotheres tristis,Common myna
+Sitta pygmaea,Pygmy nuthatch
+Actophilornis africanus,African jacana
+Sitta canadensis,Red-breasted nuthatch
+Sitta europaea,Eurasian nuthatch
+Sitta pusilla,Brown-headed nuthatch
+Apus apus,Common swift
+Sturnus vulgaris,Common starling
+Seiurus aurocapilla,Ovenbird
+Motacilla flava,Western yellow wagtail
+Vireo griseus,White-eyed vireo
+Toxostoma longirostre,Long-billed thrasher
+Calidris alba,Sanderling
+Toxostoma redivivum,California thrasher
+Gallinula galeata,Common gallinule
+Calidris himantopus,Stilt sandpiper
+Eugenes fulgens,Rivoli's hummingbird
+Icterus wagleri,Black-vented oriole
+Icterus parisorum,Scott's oriole
+Buteo platypterus,Broad-winged hawk
+Gallinago gallinago,Common snipe
+Icterus spurius,Orchard oriole
+Calidris minutilla,Least sandpiper
+Dumetella carolinensis,Gray catbird
+Porphyrio hochstetteri,South Island takahē
+Calidris fuscicollis,White-rumped sandpiper
+Phalaropus tricolor,Wilson's phalarope
+Colaptes auratus auratus,Colaptes auratus auratus --
+Melanotis caerulescens,Blue mockingbird
+Tiaris olivaceus,Yellow-faced grassquit
+Oreoscoptes montanus,Sage thrasher
+Limnodromus scolopaceus,Long-billed dowitcher
+Tringa solitaria,Solitary sandpiper
+Sitta carolinensis,White-breasted nuthatch
+Tringa totanus,Common redshank
+Dendrocygna autumnalis,Black-bellied whistling duck
+Dendrocygna viduata,White-faced whistling duck
+Dendrocygna bicolor,Fulvous whistling duck
+Icterus abeillei,Black-backed oriole
+Vanellus chilensis,Southern lapwing
+Cygnus buccinator,Trumpeter swan
+Cygnus cygnus,Whooper swan
+Cygnus columbianus,Tundra swan
+Cygnus olor,Mute swan
+Icterus galbula,Baltimore oriole
+Anas platyrhynchos,Mallard
+Anas acuta,Northern pintail
+Anas crecca,Eurasian teal
+Anas cyanoptera,Cinnamon teal
+Anas fulvigula,Mottled duck
+Anas discors,Blue-winged teal
+Anas strepera,Gadwall
+Anas clypeata,Northern shoveler
+Anas chlorotis,Brown teal
+Rhipidura leucophrys,Willie wagtail
+Anas americana,American wigeon
+Bucephala albeola,Bufflehead
+Mergus serrator,Red-breasted merganser
+Mergus merganser,Common merganser
+Anser anser,Greylag goose
+Anser albifrons,Greater white-fronted goose
+Somateria mollissima,Common eider
+Rallus obsoletus,Ridgway's rail
+Platycercus elegans,Crimson rosella
+Melanitta fusca,Velvet scoter
+Milvus migrans,Black kite
+Gelochelidon nilotica,Gull-billed tern
+Ninox novaeseelandiae novaeseelandiae,Morepork
+Melanitta perspicillata,Surf scoter
+Aythya collaris,Ring-necked duck
+Aythya ferina,Common pochard
+Aythya fuligula,Tufted duck
+Numenius americanus,Long-billed curlew
+Chen caerulescens,Snow goose
+Chamaea fasciata,Wrentit
+Branta canadensis,Canada goose
+Thalasseus elegans,Elegant tern
+Branta sandvicensis,Nene (bird)
+Aythya americana,Redhead (bird)
+Aix sponsa,Wood duck
+Lophodytes cucullatus,Hooded merganser
+Histrionicus histrionicus,Harlequin duck
+Aratinga nenday,Nanday parakeet
+Psittacara holochlorus,Green parakeet
+Cairina moschata,Muscovy duck
+Netta rufina,Red-crested pochard
+Psittacara erythrogenys,Red-masked parakeet
+Sayornis saya,Say's phoebe
+Aythya valisineria,Canvasback
+Picoides albolarvatus,White-headed woodpecker
+Vermivora cyanoptera,Blue-winged warbler
+Corvus caurinus,Northwestern crow
+Asio otus,Long-eared owl
+Corvus brachyrhynchos,American crow
+Clangula hyemalis,Long-tailed duck
+Chenonetta jubata,Australian wood duck
+Thalasseus sandvicensis,Sandwich tern
+Eolophus roseicapilla,Galah
+Colaptes rubiginosus,Golden-olive woodpecker
+Meleagris gallopavo silvestris,Wild turkey
+Ptiliogonys cinereus,Grey silky-flycatcher
+Elanoides forficatus,Swallow-tailed kite
+Carduelis carduelis,European goldfinch
+Cassiculus melanicterus,Mexican cacique
+Dendragapus fuliginosus,Sooty grouse
+Psaltriparus minimus,American bushtit
+Aegithalos caudatus,Long-tailed tit
+Zosterops lateralis lateralis,Silvereye
+Haliaeetus leucogaster,White-bellied sea eagle
+Uria aalge,Common murre
+Tringa semipalmata inornatus,Tringa semipalmata inornatus --
+Alauda arvensis,Eurasian skylark
+Galerida cristata,Crested lark
+Delichon urbicum,Common house martin
+Helmitheros vermivorum,Worm-eating warbler
+Hylocharis leucotis,White-eared hummingbird
+Mimus polyglottos,Northern mockingbird
+Gymnorhina tibicen,Australian magpie
+Alcedo atthis,Common kingfisher
+Streptopelia chinensis,Spotted dove
+Bombycilla cedrorum,Cedar waxwing
+Bombycilla garrulus,Bohemian waxwing
+Tadorna tadorna,Common shelduck
+Petroica australis australis,South Island robin
+Amazona autumnalis,Red-lored amazon
+Dendragapus obscurus,Dusky grouse
+Catherpes mexicanus,Canyon wren
+Tadorna ferruginea,Ruddy shelduck
+Campylorhynchus brunneicapillus,Cactus wren
+Campylorhynchus rufinucha,Veracruz wren
+Rhipidura fuliginosa,New Zealand fantail
+Polioptila melanura,Black-tailed gnatcatcher
+Pelecanus occidentalis carolinensis,Pelecanus occidentalis carolinensis --
+Melozone aberti,Abert's towhee
+Melozone crissalis,California towhee
+Thryothorus ludovicianus,Carolina wren
+Parabuteo unicinctus,Harris's hawk
+Anas platyrhynchos domesticus,Domestic duck
+Troglodytes aedon,House wren
+Buteo lineatus elegans,Buteo lineatus elegans --
+Thamnophilus doliatus,Barred antshrike
+Thryomanes bewickii,Bewick's wren
+Tadorna variegata,Paradise shelduck
+Myioborus miniatus,Slate-throated whitestart
+Phalacrocorax varius varius,Phalacrocorax varius varius --
+Myioborus pictus,Painted whitestart
+Larus argentatus smithsonianus,American herring gull
+Parkesia motacilla,Louisiana waterthrush
+Sula granti,Nazca booby
+Ara macao,Scarlet macaw
+Peucaea ruficauda,Stripe-headed sparrow
+Calidris subruficollis,Buff-breasted sandpiper
+Phoenicopterus roseus,Greater flamingo
+Morus bassanus,Northern gannet
+Pelecanus occidentalis californicus,Pelecanus occidentalis californicus --
+Glaucidium brasilianum,Ferruginous pygmy owl
+Oxyura jamaicensis,Ruddy duck
+Myiarchus cinerascens,Ash-throated flycatcher
+Chloroceryle americana,Green kingfisher
+Sturnella neglecta,Western meadowlark
+Ramphastos ambiguus,Yellow-throated toucan
+Paroaria coronata,Red-crested cardinal
+Buteo buteo,Common buzzard
+Myiodynastes luteiventris,Sulphur-bellied flycatcher
+Contopus sordidulus,Western wood pewee
+Corvus corone,Carrion crow
+Cyanoramphus novaezelandiae,Red-crowned parakeet
+Contopus virens,Eastern wood pewee
+Contopus pertinax,Greater pewee
+Contopus cooperi,Olive-sided flycatcher
+Larus argentatus,European herring gull
+Halcyon smyrnensis,White-throated kingfisher
+Onychognathus morio,Red-winged starling
+Cyanocompsa parellina,Blue bunting
+Cistothorus palustris,Marsh wren
+Tyto alba,Western barn owl
+Trogon caligatus,Gartered trogon
+Corvus monedula,Western jackdaw
+Corvus ossifragus,Fish crow
+Spheniscus demersus,African penguin
+Corvus frugilegus,Rook (bird)
+Corvus splendens,House crow
+Branta bernicla,Brant (goose)
+Larus hyperboreus,Glaucous gull
+Columba livia domestica,Domestic pigeon
+Garrulus glandarius,Eurasian jay
+Anser anser domesticus,Domestic goose
+Mitrephanes phaeocercus,Northern tufted flycatcher
+Ardenna creatopus,Pink-footed shearwater
+Ardenna gravis,Great shearwater
+background,Background
