@@ -75,14 +75,11 @@ Vagrant.configure("2") do |config|
     pip3 install "https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp36-cp36m-linux_x86_64.whl"
     pip3 install flask
 
-    # Run classifier model server
-    python3 /vagrant/classifier/run-model.py &
-
 
     #--------------------------------
     
     # Install apache for frontend
-    apt-get install -y apache2
+    apt-get install -y apache2 php libapache2-mod-php
 
     # Change VM's webserver's configuration to use shared /vagrant/www folder.
     cp /vagrant/birdwatcher-website.conf /etc/apache2/sites-available/
@@ -92,6 +89,8 @@ Vagrant.configure("2") do |config|
     a2dissite 000-default
     service apache2 reload
 
+    # Run classifier model server. Its blocking so run at end.
+    python3 /vagrant/classifier/run-model.py &
 
 
   SHELL
