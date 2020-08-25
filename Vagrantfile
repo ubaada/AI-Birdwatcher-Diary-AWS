@@ -28,6 +28,7 @@ Vagrant.configure("2") do |config|
   # within the machine from a port on the host machine and only allow access
   # via 127.0.0.1 to disable public access
   # config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
+  config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -75,7 +76,23 @@ Vagrant.configure("2") do |config|
     pip3 install flask
 
     # Run classifier model server
-    python3 /vagrant/classifier/run-model.py
+    python3 /vagrant/classifier/run-model.py &
+
+
+    #--------------------------------
+    
+    # Install apache for frontend
+    apt-get install -y apache2
+
+    # Change VM's webserver's configuration to use shared /vagrant/www folder.
+    cp /vagrant/birdwatcher-website.conf /etc/apache2/sites-available/
+    
+    # install our website configuration and disable the default
+    a2ensite birdwatcher-website
+    a2dissite 000-default
+    service apache2 reload
+
+
 
   SHELL
 end

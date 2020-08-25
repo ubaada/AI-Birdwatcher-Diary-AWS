@@ -4,7 +4,7 @@ import os
 # Processes post request to our server
 from flask import Flask
 from flask import request
-
+import threading
 
 # Image / Matrix processing libraries
 from PIL import Image
@@ -86,4 +86,5 @@ if __name__ == "__main__":
         print(classify_file(command))
     else: 
         print("Starting AI classifier server ...")
-        app.run(host='0.0.0.0', port=4999,debug=True)
+        threading.Thread(target=app.run(host='0.0.0.0', use_reloader=False,debug=False)).start()
+        
