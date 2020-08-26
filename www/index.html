@@ -86,29 +86,7 @@
 				<div class="card center-align grey-text text-darken-1 z-depth-0" style="background-color: rgb(240,240,240);padding:3px;">
 					<p>History</p>
 				</div>
-				<div class="card hoverable">
-					<div class="row">
-						<div class="col s8">
-							<div class ="truncate grey-text text-darken-1" style="padding-left:10px;padding-top: 14px;">
-								Sun Conure
-							</div>
-						</div>
-						<div class="col s4 right-align">
-							<img style ="max-width:50px;height:50px;margin:auto;" src="images/empty-bird.png"/>
-						</div>
-					</div>	
-				</div>
-				<div class="card hoverable">
-					<div class="row">
-						<div class="col s8">
-							<div class ="truncate grey-text text-darken-1" style="padding-left:10px;padding-top: 14px;">
-								African Grey Parrot
-							</div>
-						</div>
-						<div class="col s4 right-align">
-							<img style ="max-width:50px;height:50px;margin:auto;" src="images/empty-bird.png"/>
-						</div>
-					</div>	
+				<div id ="all_birds">
 				</div>
 			</div>
 		</div>
@@ -171,11 +149,29 @@
 					}
 				} else {
 					var msg = 'Could not identify the specie.<br>Are you sure that is a bird?';
-					  M.toast({html: msg, displayLength:5000,classes: 'red rounded' })
+					M.toast({html: msg, displayLength:5000,classes: 'red rounded' })
 				}	
 			}
 		});
 		
+	}
+
+	// Load previous record upon document load.
+	$( document ).ready(function() {
+	    set_all_birds();
+	});
+
+
+	// Gets previous bird sighting entries from get_all.php
+	function set_all_birds() {
+		$.ajax({
+			url: "get_all.php",
+			type: "GET",
+			success: function(data){
+				// Result received from server
+				$("#all_birds").html(data);
+			}
+		});
 	}
 </script>
 </body>
