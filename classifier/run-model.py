@@ -50,9 +50,8 @@ def classify_image(img):
 
     # Get bird class with highest probability
     max_ind = np.argmax(output)
-    prediction = labels[max_ind]
-    prediction.append(output[max_ind]) # add prediction probability
-    return prediction
+    # Send ScientificName, CommonName, Probability
+    return labels[max_ind][0] + ',' + labels[max_ind][1] + ',' + str(output[max_ind])
 
 # Classifies the given file into different bird species
 def classify_file(file_address):
@@ -63,11 +62,12 @@ def classify_file(file_address):
 
 
 
-# Listens on '/' for an posted image and sends
+# Listens on '/' for an posted image and sends class back
 app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
+        # Store image file temperarily to classify
         f = request.files['file']
         f.save('/tmp/' + f.filename)
         bird_class = classify_file('/tmp/' + f.filename)

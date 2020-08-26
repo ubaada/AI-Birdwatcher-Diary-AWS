@@ -13,6 +13,9 @@
 	<!--Let browser know website is optimized for mobile-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+	<!-- Import jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 <body>
 	<div class="container">
@@ -20,8 +23,8 @@
 		<div class="row">
 			<div class="col s12 m8">
 				<div class="card">
-					<div class="center-align" style="background-color: rgb(240,240,240); width:100%; height:300px;padding-top:40px;">
-						<img src="images/empty-bird.png"/>
+					<div class="center-align valign-wrapper" style="background-color: rgb(240,240,240); width:100%; height:300px;">
+						<img id="bird-img" style ="max-width:100%;height:100%;margin:auto;" src="images/empty-bird.png"/>
 					</div>
 					<div class="row" style="padding:10px;">
 						<form class="col s12" action="upload.php" method="post" enctype="multipart/form-data">
@@ -31,7 +34,7 @@
 									<div class="file-field input-field">
 										<div class="btn">
 											<span>Upload Image to Scan</span>
-											<input type="file">
+											<input type="file" id="imgInp" accept="image/x-png, image/gif, image/jpeg, image/jpg" >
 										</div>
 										<div class="file-path-wrapper">
 											<input class="file-path validate" type="text">
@@ -39,8 +42,10 @@
 									</div>
 								</div>
 							</div>
+
 							<!-- Scientific Name & Common Name Field -->
-							<div class="row">
+							<div class="row" id="name_pair">
+								
 								<div class="col s6">
 									<input id="scientific_name" type="text" class="validate">
 									<label for="scientific_name">Scientific Name</label>
@@ -66,7 +71,7 @@
 							</div>
 
 							<!-- Submit button -->
-							<div class="row"><div class="col s12">
+							<div class="row"><div class="col s12 right-align">
 								<button class="waves-effect waves-light btn" type="file" name="fileToUpload" id="fileToUpload">
 									Submit
 									<i class="material-icons right">send</i>
@@ -109,7 +114,70 @@
 		</div>
 	</div>
 </div>
+<script>
 
+	// Display the selected img and Classify it.
+	$("#imgInp").change(function(){
+
+		readURL(this);
+		send_img_to_classifier();
+	});
+	
+	// Display the user-selected image in the box
+	function readURL(input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+
+			reader.onload = function (e) {
+				$('#bird-img').attr('src', e.target.result);
+			}
+
+			reader.readAsDataURL(input.files[0]);
+		}
+	}
+
+
+	// Send the bird image to /which-bird.php to classify it.
+	function send_img_to_classifier() {
+		// Clear text fields
+		$("#scientific_name").val("");
+		$("#common_name").val("");
+
+		var file_data = $('#imgInp').prop('files')[0];   
+		var form_data = new FormData();                  
+		form_data.append('file', file_data);
+		$.ajax({
+			url: "which-bird.php",
+			type: "POST",
+			data: form_data,
+			contentType: false,
+			cache: false,
+			processData:false,
+			success: function(data){
+				// Result received from server
+				console.log(data);
+				var c = data.split(",");
+
+				// Check if the image is of a bird or not
+				if (c[0].valueOf() != "background".valueOf()) {
+					// Set text fields to received names
+					$("#scientific_name").val(c[0]);
+					$("#common_name").val(c[1]);
+					if (c[2] < 0.4) {
+						var msg ='Not super sure about that :/<br>Maybe its not one of species our system is able to detect?';
+						M.toast({html: msg,displayLength:10000,classes: 'rounded'});
+					} else {
+						M.toast({html: 'Successful',displayLength:4000,classes: 'teal rounded'});	
+					}
+				} else {
+					var msg = 'Could not identify the specie.<br>Are you sure that is a bird?';
+					  M.toast({html: msg, displayLength:5000,classes: 'red rounded' })
+				}	
+			}
+		});
+		
+	}
+</script>
 </body>
 
 </html>
