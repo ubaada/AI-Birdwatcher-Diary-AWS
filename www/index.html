@@ -92,6 +92,42 @@
 		</div>
 	</div>
 </div>
+  <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+	<div class="modal-content">
+		<div class="row" style="margin-bottom: 0px;">
+			<div class="col s5">
+				<img id="open-bird-img" style ="max-width:100%;height:250px;umargin:auto;" src="birdimages/16.jpg" />
+			</div>
+			<div class="col s7">
+				<table>
+					<tr>
+						<h4 id="open_cn">Hello</h4>
+					</tr>
+					<tr>
+						<div id="open_sn">hello</div>
+					</tr>
+					<tr>
+						<td>Time & Date</td>
+						<td id="open_st">21:12:21 10::19:11</td>
+					</tr>
+					<tr>
+						<td>Location</td>
+						<td id="open_loc">21:12:21 10::19:11</td>
+					</tr>
+				</table>
+				
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer" style="border-top: 1px solid silver;padding:10px;height:70px;">
+		<a href="#!" id="del_bird_btn" class="modal-close waves-effect red waves-light btn text-white">Delete</a>
+		<a href="#!" class="modal-close waves-effect teal waves-light btn text-white">  OK  </a>
+	</div>
+</div>
 <script>
 
 	// Display the selected img and Classify it.
@@ -160,7 +196,7 @@
 
 	// Load previous record upon document load.
 	$( document ).ready(function() {
-	    set_all_birds();
+		set_all_birds();
 	});
 
 
@@ -218,6 +254,38 @@
 	$( "#submit" ).click(function() {
 		post_bird();
 	});
+
+	//initialise materialize modals
+	document.addEventListener('DOMContentLoaded', function() {
+		var elems = document.querySelectorAll('.modal');
+		var instances = M.Modal.init(elems, []);
+	});
+
+	function show_dialog(id,sn,cn,st,loc) {
+		// set modal labels
+		$('#open_sn').text(sn);
+		$('#open_cn').text(cn);
+		$('#open_st').text(st);
+		$('#open_loc').text(loc);
+		// set image based on id
+		$('#open-bird-img').attr('src','birdimages/' + id +'.jpg');
+
+		//clear prev events and bind a func with id as param.
+		$("#del_bird_btn").off("click");
+		$('#del_bird_btn').click(function() {
+			delete_bird(id);
+		});
+
+		//show modal
+		var elem = document.querySelector('#modal1');
+		var instance = M.Modal.getInstance(elem);
+		instance.open();
+	}
+
+	// delete bird by id
+	function delete_bird(id) {
+		alert(id);
+	}
 
 </script>
 </body>
