@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 
 try{
 	$id = $_GET["id"];
-	$db_host   = '127.0.0.1:3306';
+	$db_host   = '192.168.2.12:3306';
 	$db_name   = 'fvision';
 	$db_user   = 'webuser';
 	$db_passwd = 'insecure_db_pw';
