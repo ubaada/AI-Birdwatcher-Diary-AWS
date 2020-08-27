@@ -12,7 +12,7 @@ $pdo = new PDO($pdo_dsn, $db_user, $db_passwd);
 $q = $pdo->query("SELECT * FROM birds");
 
 while($row = $q->fetch()){
-  echo '<div class="card hoverable"><div class="row"><div class="col s8"><div class ="truncate grey-text text-darken-1" style="padding-left:10px;padding-top: 14px;">' . $row["common_name"] . '</div></div><div class="col s4 right-align"><img style ="max-width:50px;height:50px;margin:auto;" src="images/empty-bird.png"/></div></div>	</div>';
+  echo '<div class="card hoverable"><div class="row"><div class="col s8"><div class ="truncate grey-text text-darken-1" style="padding-left:10px;padding-top: 14px;">' . $row["common_name"] . '</div></div><div class="col s4 right-align"><img style ="max-width:50px;height:50px;margin:auto;" src="birdimages/'. $row["id"] .'.jpg"/></div></div>	</div>';
 }
 
 ?>

@@ -31,7 +31,12 @@ if (empty($scientific_name) or empty($common_name) or empty($sighting_time) or e
 		if ($stmt->execute()=== TRUE) {
 		# Successful data insertion
 			$last_id =  $pdo->lastInsertId();
-			move_uploaded_file($_FILES["file"]["tmp_name"], '/home/vagrant/birds/' . $last_id . '.jpg');
+			//make dir if doesn't exist
+			$b_dir = '/vagrant/www/birdimages/';
+			if ( ! is_dir($b_dir)) {
+			    mkdir($b_dir);
+			}
+			move_uploaded_file($_FILES["file"]["tmp_name"], $b_dir . $last_id . '.jpg');
 			echo 200;
 		} else {
 			echo 500;
