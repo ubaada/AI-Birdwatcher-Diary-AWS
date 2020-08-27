@@ -23,11 +23,11 @@
 		<div class="row">
 			<div class="col s12 m8">
 				<div class="card">
-					<div class="center-align valign-wrapper" style="background-color: rgb(240,240,240); width:100%; height:300px;">
-						<img id="bird-img" style ="max-width:100%;height:100%;margin:auto;" src="images/empty-bird.png"/>
+					<div class="center-align valign-wrapper" style="background-color: rgb(240,240,240); width:100%; height:300px;  background-image: url('images/empty-bird.png');  background-repeat: no-repeat;background-position: center;">
+						<img id="bird-img" style ="max-width:100%;height:100%;margin:auto;display: none;" src="" />
 					</div>
 					<div class="row" style="padding:10px;">
-						<form class="col s12" action="upload.php" method="post" enctype="multipart/form-data">
+						<div class="col s12">
 							<!-- Upload Button -->
 							<div class="row">
 								<div class="col s12">
@@ -60,24 +60,24 @@
 							<!-- TIme & Location Field -->
 							<div class="row">
 								<div class="col s6">
-									<input id="b_time" type="text" class="validate">
-									<label for="b_time">Sighting Time</label>
+									<input id="sighting_time" type="text" class="validate">
+									<label for="sighting_time">Sighting Time</label>
 								</div>
 								
 								<div class="col s6">
-									<input id="b_location" type="text" class="validate">
-									<label for="b_location">Sighting Location</label>
+									<input id="location" type="text" class="validate">
+									<label for="location">Sighting Location</label>
 								</div>
 							</div>
 
 							<!-- Submit button -->
 							<div class="row"><div class="col s12 right-align">
-								<button class="waves-effect waves-light btn" type="file" name="fileToUpload" id="fileToUpload">
+								<button class="waves-effect waves-light btn" id="submit">
 									Submit
 									<i class="material-icons right">send</i>
 								</button>
 							</div></div>
-						</form>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -107,7 +107,9 @@
 			var reader = new FileReader();
 
 			reader.onload = function (e) {
+				$("#bird-img").css("display", "block");
 				$('#bird-img').attr('src', e.target.result);
+
 			}
 
 			reader.readAsDataURL(input.files[0]);
@@ -173,6 +175,50 @@
 			}
 		});
 	}
+
+	function post_bird() {
+		var form_data = new FormData();                  
+		form_data.append('scientific_name', $('#scientific_name').val());
+		form_data.append('common_name', $('#common_name').val());
+		form_data.append('sighting_time', $('#sighting_time').val());
+		form_data.append('location', $('#location').val());
+		form_data.append('file', $('#imgInp').prop('files')[0]);
+		$.ajax({
+			url: "store-bird.php",
+			type: "POST",
+			data: form_data,
+			contentType: false,
+			cache: false,
+			processData:false,
+			success: function(data){
+				// Result received from server
+				console.log(data);
+				if (data.valueOf() == "200".valueOf()) {
+					// insertion successfull
+					set_all_birds();
+					$("#scientific_name").val("");
+					$("#common_name").val("");
+					$("#sighting_time").val("");
+					$("#location").val("");
+					M.toast({html: 'Entry Added!',displayLength:4000,classes: 'teal rounded'});	
+				} else if (data.valueOf() == "422".valueOf()){
+					// insertion unsuccessfull
+					var msg = 'Complete all the text fields and select an image';
+					M.toast({html: msg,displayLength:4000,classes: 'red rounded'});	
+				} else {
+					// insertion unsuccessfull
+					var msg = 'Something went wrong :(<br> Check your data.';
+					M.toast({html: msg,displayLength:4000,classes: 'red rounded'});	
+				}
+			}
+		});
+		
+	}
+
+	$( "#submit" ).click(function() {
+		post_bird();
+	});
+
 </script>
 </body>
 

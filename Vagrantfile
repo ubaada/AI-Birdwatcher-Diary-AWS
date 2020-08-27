@@ -82,7 +82,7 @@ Vagrant.configure("2") do |config|
     #--------------------------------
     
     # Install apache for frontend
-    apt-get install -y apache2 php libapache2-mod-php php-curl
+    apt-get install -y apache2 php libapache2-mod-php php-curl php-mysql
 
     # Change VM's webserver's configuration to use shared /vagrant/www folder.
     cp /vagrant/birdwatcher-website.conf /etc/apache2/sites-available/

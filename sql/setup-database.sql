@@ -3,7 +3,7 @@ CREATE TABLE birds (
 	scientific_name varchar(100) NOT NULL,
 	common_name varchar(100) NOT NULL,
 	sighting_time DATETIME NOT NULL,
-	location varchar(100)
+	location varchar(100) NOT NULL
 );
 
 INSERT INTO birds VALUES (1,'Haemorhous cassinii','Cassin\'s finch', '2018-04-26 14:00:00', 'Georgia');
