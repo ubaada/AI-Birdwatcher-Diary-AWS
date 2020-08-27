@@ -37,7 +37,7 @@
 											<input type="file" id="imgInp" accept="image/x-png, image/gif, image/jpeg, image/jpg" >
 										</div>
 										<div class="file-path-wrapper">
-											<input class="file-path validate" type="text">
+											<input id="imgname" class="file-path validate" type="text">
 										</div>
 									</div>
 								</div>
@@ -143,8 +143,8 @@
 			var reader = new FileReader();
 
 			reader.onload = function (e) {
-				$("#bird-img").css("display", "block");
 				$('#bird-img').attr('src', e.target.result);
+				$("#bird-img").css("display", "block");
 
 			}
 
@@ -183,7 +183,7 @@
 						var msg ='Not super sure about that :/<br>Maybe its not one of species our system is able to detect?';
 						M.toast({html: msg,displayLength:10000,classes: 'rounded'});
 					} else {
-						M.toast({html: 'Successful',displayLength:4000,classes: 'teal rounded'});	
+						M.toast({html: 'Successfully identified!',displayLength:4000,classes: 'teal rounded'});	
 					}
 				} else {
 					var msg = 'Could not identify the specie.<br>Are you sure that is a bird?';
@@ -232,10 +232,14 @@
 				if (data.valueOf() == "200".valueOf()) {
 					// insertion successfull
 					set_all_birds();
+					//clear fotm
 					$("#scientific_name").val("");
 					$("#common_name").val("");
 					$("#sighting_time").val("");
 					$("#location").val("");
+					$("#bird-img").css("display", "none");
+					$("#imgInp").val(null);
+					$("#imgname").val("");
 					M.toast({html: 'Entry Added!',displayLength:4000,classes: 'teal rounded'});	
 				} else if (data.valueOf() == "422".valueOf()){
 					// insertion unsuccessfull
@@ -284,7 +288,9 @@
 
 	// delete bird by id
 	function delete_bird(id) {
-		alert(id);
+		$.get("delete-bird.php?id=" + id, function(data, status){
+			set_all_birds();
+		});
 	}
 
 </script>
