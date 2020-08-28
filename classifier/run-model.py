@@ -76,6 +76,11 @@ def upload_file():
 
     return "Nothing recieved."
 
+@app.route('/list',methods=['GET'])
+def send_list():
+    label_path = os.path.join(os.path.dirname(__file__), "labels.txt")
+    list = open(str(label_path), "r").read()
+    return list
 
 if __name__ == "__main__":
     # if a file is passed as arg then classify it and quit

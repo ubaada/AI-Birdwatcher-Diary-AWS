@@ -1,8 +1,5 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 # Form data
 $scientific_name = $_POST["scientific_name"];
 $common_name = $_POST["common_name"];
@@ -45,7 +42,7 @@ if (empty($scientific_name) or empty($common_name) or empty($sighting_time) or e
 			}
 			if (move_uploaded_file($_FILES["file"]["tmp_name"], $b_dir . $last_id . '.jpg')==false) {
 				//image couldn't be uploaded
-				echo "500:" .$_FILES["file"]["error"];
+				echo "500";
 				return;
 
 			}

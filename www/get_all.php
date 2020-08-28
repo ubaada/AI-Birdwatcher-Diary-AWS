@@ -17,7 +17,7 @@ $q = $pdo->query("SELECT * FROM birds");
 
 while($row = $q->fetch()){
 	$s ='"';
-	echo "<div class='card hoverable' onclick='show_dialog("
+	echo "<div class='card hoverable' style='cursor:pointer;' onclick='show_dialog("
 	. $s . $row["id"] . $s . ',' 
 	. $s . clean($row["scientific_name"]) . $s . ',' 
 	. $s . clean($row["common_name"]) . $s . ',' 

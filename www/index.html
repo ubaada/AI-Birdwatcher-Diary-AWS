@@ -28,6 +28,7 @@
 					<div class="center-align valign-wrapper" style="background-color: rgb(240,240,240); width:100%; height:300px;  background-image: url('images/empty-bird.png');  background-repeat: no-repeat;background-position: center;">
 						<img id="bird-img" style ="max-width:100%;height:100%;margin:auto;display: none;" src="" />
 					</div>
+
 					<div class="row" style="padding:10px;">
 						<div class="col s12">
 							<!-- Upload Button -->
@@ -81,6 +82,10 @@
 							</div></div>
 						</div>
 					</div>
+					<div style="background-color: rgb(240,240,240);padding: 3px;padding-left:7px;color:grey;">
+						This app supports identification of 964 species. 
+						<a href="#" style="cursor:pointer;" onclick="show_list()"> View entire list</a>
+					</div>
 				</div>
 			</div>
 
@@ -125,6 +130,19 @@
 	<div class="modal-footer" style="border-top: 1px solid silver;padding:10px;height:70px;">
 		<a href="#!" id="del_bird_btn" class="modal-close waves-effect red waves-light btn text-white">Delete</a>
 		<a href="#!" class="modal-close waves-effect teal waves-light btn text-white">  OK  </a>
+	</div>
+</div>
+<div id="list-modal" class="modal">
+	<div class="modal-footer" style="border-top: 1px solid silver;padding:10px;height:70px;">
+		<a href="#!" class="modal-close waves-effect teal waves-light btn text-white">  X  </a>
+	</div>
+	<div class="modal-content">
+			<div id="list-div">
+
+			</div>
+	</div>
+	<div class="modal-footer" style="border-top: 1px solid silver;padding:10px;height:70px;">
+		<a href="#!" class="modal-close waves-effect teal waves-light btn text-white">  OK </a>
 	</div>
 </div>
 <script>
@@ -290,6 +308,24 @@
 		});
 	}
 
+	//show all birds supported by AI model
+	function show_list(){
+		$.get("catalogue.php", function(data, status){
+			//show list
+			c = data.split("\n");
+			html = '<table><thead><tr><th>#</th><th>Common Name</th><th>Scientific Name</th></tr></thead><tbody>';
+			for (i = 0; i < c.length-1; i++) {
+				c2 = c[i].split(",");
+			  	html += "<tr><td>" + (i+1) + "</td><td>" + c2[0] + "</td><td>" + c2[1] + "</td></tr>";
+			}
+			html = html + "</tbody></table>"
+			$("#list-div").html(html);
+
+			var elem = document.querySelector('#list-modal');
+			var instance = M.Modal.getInstance(elem);
+			instance.open();
+		});
+	}
 </script>
 </body>
 
