@@ -20,7 +20,7 @@ try{
 	if ($stmt->execute()=== TRUE) {
 		//successfully deleted row
 		//Now delete its image.
-		unlink('/vagrant/www/birdimages/' . $id . '.jpg');
+		unlink('/etc/birdimages/' . $id . '.jpg');
 		echo "200";
 	} else {
 		echo "500";

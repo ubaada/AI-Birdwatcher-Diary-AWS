@@ -1,5 +1,8 @@
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 # Form data
 $scientific_name = $_POST["scientific_name"];
 $common_name = $_POST["common_name"];
@@ -7,7 +10,11 @@ $sighting_time = $_POST["sighting_time"];
 $location = $_POST["location"];
 
 //check if any field is empty
-if (empty($scientific_name) or empty($common_name) or empty($sighting_time) or empty($location)) {
+$img_val =false;
+if(exif_imagetype($_FILES["file"]["tmp_name"])) {
+	$img_val =true;
+}
+if (empty($scientific_name) or empty($common_name) or empty($sighting_time) or empty($location) or !$img_val) {
 	echo '422';
 } else {
 	try {
@@ -32,14 +39,19 @@ if (empty($scientific_name) or empty($common_name) or empty($sighting_time) or e
 		# Successful data insertion
 			$last_id =  $pdo->lastInsertId();
 			//make dir if doesn't exist
-			$b_dir = '/vagrant/www/birdimages/';
+			$b_dir = '/etc/birdimages/';
 			if ( ! is_dir($b_dir)) {
 			    mkdir($b_dir);
 			}
-			move_uploaded_file($_FILES["file"]["tmp_name"], $b_dir . $last_id . '.jpg');
+			if (move_uploaded_file($_FILES["file"]["tmp_name"], $b_dir . $last_id . '.jpg')==false) {
+				//image couldn't be uploaded
+				echo "500:" .$_FILES["file"]["error"];
+				return;
+
+			}
 			echo 200;
 		} else {
-			echo 500;
+			echo "500";
 		}
 
 	} catch(PDOException $e) {

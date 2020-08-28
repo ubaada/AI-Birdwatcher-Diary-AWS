@@ -100,6 +100,13 @@ Vagrant.configure("2") do |config|
 
       # Change VM's webserver's configuration to use shared /vagrant/www folder.
       cp /vagrant/birdwatcher-website.conf /etc/apache2/sites-available/
+
+      # Create directory to store images outside of shared vagrant drive 
+      mkdir /etc/birdimages
+
+      # Set permissions for that outside directory
+      sudo chgrp -R www-data /etc/birdimages
+      sudo chmod -R g+w /etc/birdimages
       
       # install our website configuration and disable the default
       a2ensite birdwatcher-website
@@ -107,10 +114,9 @@ Vagrant.configure("2") do |config|
       service apache2 reload
 
       # Download images associated with the sample sql data.
-      mkdir /vagrant/www/birdimages
-      wget -O /vagrant/www/birdimages/1.jpg https://upload.wikimedia.org/wikipedia/commons/2/28/Cassin%27s_Finch_%28male%29.jpg
-      wget -O /vagrant/www/birdimages/2.jpg https://www.birdwatchersdigest.com/bwdsite/wp-content/uploads/2018/06/Limpkin1-600.jpg
-      wget -O /vagrant/www/birdimages/3.jpg https://live.staticflickr.com/7812/32127525697_ce93af4f5f_b.jpg
+      wget -O /etc/birdimages/1.jpg https://upload.wikimedia.org/wikipedia/commons/2/28/Cassin%27s_Finch_%28male%29.jpg
+      wget -O /etc/birdimages/2.jpg https://www.birdwatchersdigest.com/bwdsite/wp-content/uploads/2018/06/Limpkin1-600.jpg
+      wget -O /etc/birdimages/3.jpg https://live.staticflickr.com/7812/32127525697_ce93af4f5f_b.jpg
 
     SHELL
   end
