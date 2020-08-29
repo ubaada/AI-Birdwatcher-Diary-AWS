@@ -1,7 +1,9 @@
 <?php
 
 function clean($string) {
-   return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
+	$string = str_replace('\'', '', $string);
+	$string = str_replace('"', '', $string); 
+	return $string;
 }
 
 $db_host   = '192.168.2.12:3306';
