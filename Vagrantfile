@@ -17,10 +17,12 @@ Vagrant.configure("2") do |config|
   # VM # 1: The Webserver
   config.vm.define "webserver" do |webserver|
     webserver.vm.provider :aws do |aws, override|
+      aws.tags = {'Name' => "Weberver"}
       aws.region = "us-east-1"
       override.nfs.functional = false
         override.vm.allowed_synced_folder_types = :rsync
         aws.keypair_name = "cosc349-l"
+        aws.private_ip_address = "172.31.16.11"
         override.ssh.private_key_path = "~/.ssh/cosc349-l.pem"
         aws.instance_type = "t2.micro"
         aws.security_groups = ["sg-00f266d3bdade44a0"]
@@ -61,10 +63,12 @@ Vagrant.configure("2") do |config|
   # VM # 2: The AIserver
   config.vm.define "aiserver" do |aiserver|
     aiserver.vm.provider :aws do |aws, override|
+      aws.tags = {'Name' => "AIserver"}
       aws.region = "us-east-1"
       override.nfs.functional = false
         override.vm.allowed_synced_folder_types = :rsync
         aws.keypair_name = "cosc349-l"
+        aws.private_ip_address = "172.31.16.13"
         override.ssh.private_key_path = "~/.ssh/cosc349-l.pem"
         aws.instance_type = "t2.micro"
         aws.security_groups = ["sg-00f266d3bdade44a0"]

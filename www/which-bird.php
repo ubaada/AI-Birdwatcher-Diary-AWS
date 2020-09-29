@@ -17,7 +17,7 @@ else {
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 	curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)");
 
-	curl_setopt($ch, CURLOPT_URL, 'http://192.168.2.13:5000/');
+	curl_setopt($ch, CURLOPT_URL, 'http://172.31.16.13:5000/');
 	curl_setopt($ch, CURLOPT_POST, 1);
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 	$result=curl_exec($ch);
