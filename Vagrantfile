@@ -1,123 +1,95 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
-
-# he "2" in Vagrant.configure
-# configures the configuration version 
+class Hash
+  def slice(*keep_keys)
+    h = {}
+    keep_keys.each { |key| h[key] = fetch(key) if has_key?(key) }
+    h
+  end unless Hash.method_defined?(:slice)
+  def except(*less_keys)
+    slice(*keys - less_keys)
+  end unless Hash.method_defined?(:except)
+end
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
 Vagrant.configure("2") do |config|
+  # Online Vagrantfile documentation is at https://docs.vagrantup.com.
 
-  config.vm.box = "ubuntu/bionic64"
+  # The AWS provider does not actually need to use a Vagrant box file.
+  config.vm.box = "dummy"
 
-  config.vm.define "dbserver" do |dbserver|
-    # set name
-    dbserver.vm.hostname = "dbserver"
-    # static ip to be enable communication between VMs.
-    dbserver.vm.network "private_network", ip: "192.168.2.12"
-    # permissions for a shared drive on a network.
-    dbserver.vm.synced_folder ".", "/vagrant", owner: "vagrant", group: "vagrant", mount_options: ["dmode=775,fmode=777"]
-    
-    # Provisioning for dbserver VM
-    dbserver.vm.provision "shell", inline: <<-SHELL
-      apt-get update
+  config.vm.provider :aws do |aws, override|
+    # We will gather the data for these three aws configuration
+    # parameters from environment variables (more secure than
+    # committing security credentials to your Vagrantfile).
+    #
+    # aws.access_key_id = "YOUR KEY"
+    # aws.secret_access_key = "YOUR SECRET KEY"
+    # aws.session_token = "SESSION TOKEN"
 
-      # Set up pre-set answers to mysql-server install to avoid prompt blocking the shell
-      echo "mysql-server mysql-server/root_password password $MYSQL_PWD" | debconf-set-selections 
-      echo "mysql-server mysql-server/root_password_again password $MYSQL_PWD" | debconf-set-selections
+    # The region for Amazon Educate is fixed.
+    aws.region = "us-east-1"
 
-      # Install the MySQL database server.
-      apt-get -y install mysql-server
+    # These options force synchronisation of files to the VM's
+    # /vagrant directory using rsync, rather than using trying to use
+    # SMB (which will not be available by default).
+    override.nfs.functional = false
+    override.vm.allowed_synced_folder_types = :rsync
 
-      # Run some setup commands to get the database ready to use.
-      # First create a database.
-      echo "CREATE DATABASE fvision;" | mysql
+    # Following the lab instructions should lead you to provide values
+    # appropriate for your environment for the configuration variable
+    # assignments preceded by double-hashes in the remainder of this
+    # :aws configuration section.
 
-      # Then create a database user "webuser" with the given password.
-      echo "CREATE USER 'webuser'@'%' IDENTIFIED BY 'insecure_db_pw';" | mysql
+    # The keypair_name parameter tells Amazon which public key to use.
+    aws.keypair_name = "cosc349-l"
+    # The private_key_path is a file location in your macOS account
+    # (e.g., ~/.ssh/something).
+    override.ssh.private_key_path = "~/.ssh/cosc349-l.pem"
 
-      # Grant all permissions to the database user "webuser" regarding
-      # the "fvision" database that we just created, above.
-      echo "GRANT ALL PRIVILEGES ON fvision.* TO 'webuser'@'%'" | mysql
-      
-      # Set the MYSQL_PWD shell variable that the mysql command will
-      # try to use as the database password ...
-      export MYSQL_PWD='insecure_db_pw'
+    # Choose your Amazon EC2 instance type (t2.micro is cheap).
+    aws.instance_type = "t2.micro"
 
-      # Set up table and sample data.
-      cat /vagrant/sql/setup-database.sql | mysql -u webuser fvision
+    # You need to indicate the list of security groups your VM should
+    # be in. Each security group will be of the form "sg-...", and
+    # they should be comma-separated (if you use more than one) within
+    # square brackets.
+    #
+    aws.security_groups = ["sg-00f266d3bdade44a0"]
 
-      # Enable public access to db server. So our webserver can contact dbserver.
-      sed -i'' -e '/bind-address/s/127.0.0.1/0.0.0.0/' /etc/mysql/mysql.conf.d/mysqld.cnf
+    # For Vagrant to deploy to EC2 for Amazon Educate accounts, it
+    # seems that a specific availability_zone needs to be selected
+    # (will be of the form "us-east-1a"). The subnet_id for that
+    # availability_zone needs to be included, too (will be of the form
+    # "subnet-...").
+    aws.availability_zone = "us-east-1a"
+    aws.subnet_id = "subnet-ceb3ce83"
 
-      # Restart mysql for changes to take effect.
-      service mysql restart
-    SHELL
+
+    # You need to chose the AMI (i.e., hard disk image) to use. This
+    # will be of the form "ami-...".
+    # 
+    # If you want to use Ubuntu Linux, you can discover the official
+    # Ubuntu AMIs: https://cloud-images.ubuntu.com/locator/ec2/
+    #
+    # You need to get the region correct, and the correct form of
+    # configuration (probably amd64, hvm:ebs-ssd, hvm).
+    #
+    # AMI = bionic, us-east-1, amd64, hvm, ebs
+    aws.ami = "ami-013da1cc4ae87618c"
+
+    # If using Ubuntu, you probably also need to uncomment the line
+    # below, so that Vagrant connects using username "ubuntu".
+    override.ssh.username = "ubuntu"
   end
 
-  config.vm.define "aiserver" do |aiserver|
-    # set name
-    aiserver.vm.hostname = "aiserver"
-    # static ip to be enable communication between VMs.
-    aiserver.vm.network "private_network", ip: "192.168.2.13"
-    # permissions for a shared drive on a network.
-    aiserver.vm.synced_folder ".", "/vagrant", owner: "vagrant", group: "vagrant", mount_options: ["dmode=775,fmode=777"]
-    
-    # Provisioning for aiserver VM
-    aiserver.vm.provision "shell", inline: <<-SHELL
-      apt-get update
-
-      # Install pip to install python packages
-      apt-get install -y python3-pip
-
-      #Install python packahes
-      pip3 install pillow
-      pip3 install numpy
-      pip3 install "https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp36-cp36m-linux_x86_64.whl"
-      pip3 install flask
-
-      # Run classifier model server. 
-      # Nohup so it doesn't after vagrant stops the provisioning shell
-      # Redirect output to stop blocking the shell
-      nohup python3 /vagrant/classifier/run-model.py &> /home/vagrant/fl.txt &
-    SHELL
-  end
-
-  # Placing webserver at the end to wait for otherservices to boot
-  config.vm.define "webserver" do |webserver|
-    # set name
-    webserver.vm.hostname = "webserver"
-    # for only the webserver VM port for host access
-    webserver.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
-    # static ip to be enable communication between VMs.
-    webserver.vm.network "private_network", ip: "192.168.2.11"
-    # permissions for a shared drive on a network.
-    webserver.vm.synced_folder ".", "/vagrant", owner: "vagrant", group: "vagrant", mount_options: ["dmode=775,fmode=777"]
-    
-    # Provisioning for webserver VM
-    webserver.vm.provision "shell", inline: <<-SHELL
-      apt-get update
-
-      # Install apache for frontend
-      apt-get install -y apache2 php libapache2-mod-php php-curl php-mysql
-
-      # Change VM's webserver's configuration to use shared /vagrant/www folder.
-      cp /vagrant/birdwatcher-website.conf /etc/apache2/sites-available/
-
-      # Create directory to store images outside of shared vagrant drive 
-      mkdir /etc/birdimages
-
-      # Set permissions for that outside directory
-      sudo chgrp -R www-data /etc/birdimages
-      sudo chmod -R g+w /etc/birdimages
-      
-      # install our website configuration and disable the default
-      a2ensite birdwatcher-website
-      a2dissite 000-default
-      service apache2 reload
-
-      # Download images associated with the sample sql data.
-      wget -O /etc/birdimages/1.jpg https://upload.wikimedia.org/wikipedia/commons/2/28/Cassin%27s_Finch_%28male%29.jpg
-      wget -O /etc/birdimages/2.jpg https://www.birdwatchersdigest.com/bwdsite/wp-content/uploads/2018/06/Limpkin1-600.jpg
-      wget -O /etc/birdimages/3.jpg https://live.staticflickr.com/7812/32127525697_ce93af4f5f_b.jpg
-
-    SHELL
-  end
+  # Enable provisioning with a shell script. Additional provisioners such as
+  # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
+  # documentation for more information about their specific syntax and use.
+  # config.vm.provision "shell", inline: <<-SHELL
+  #   apt-get update
+  #   apt-get install -y apache2
+  # SHELL
 end
