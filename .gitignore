@@ -2,3 +2,4 @@
 ubuntu-bionic-18.04-cloudimg-console.log
 classifier/__pycache__/
 www/birdimages/
+.config

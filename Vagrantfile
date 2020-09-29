@@ -57,6 +57,8 @@ Vagrant.configure("2") do |config|
       wget -O /etc/birdimages/2.jpg https://www.birdwatchersdigest.com/bwdsite/wp-content/uploads/2018/06/Limpkin1-600.jpg
       wget -O /etc/birdimages/3.jpg https://live.staticflickr.com/7812/32127525697_ce93af4f5f_b.jpg
 
+      # Create table and add sample data
+      php /vagrant/sql/aws-sql-setup.php
     SHELL
   end
 
