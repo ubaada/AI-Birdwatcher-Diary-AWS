@@ -10,85 +10,26 @@ class Hash
     slice(*keys - less_keys)
   end unless Hash.method_defined?(:except)
 end
-# All Vagrant configuration is done below. The "2" in Vagrant.configure
-# configures the configuration version (we support older styles for
-# backwards compatibility). Please don't change it unless you know what
-# you're doing.
-Vagrant.configure("2") do |config|
-  # Online Vagrantfile documentation is at https://docs.vagrantup.com.
 
-  # The AWS provider does not actually need to use a Vagrant box file.
+Vagrant.configure("2") do |config|
   config.vm.box = "dummy"
 
-  config.vm.provider :aws do |aws, override|
-    # We will gather the data for these three aws configuration
-    # parameters from environment variables (more secure than
-    # committing security credentials to your Vagrantfile).
-    #
-    # aws.access_key_id = "YOUR KEY"
-    # aws.secret_access_key = "YOUR SECRET KEY"
-    # aws.session_token = "SESSION TOKEN"
-
-    # The region for Amazon Educate is fixed.
-    aws.region = "us-east-1"
-
-    # These options force synchronisation of files to the VM's
-    # /vagrant directory using rsync, rather than using trying to use
-    # SMB (which will not be available by default).
-    override.nfs.functional = false
-    override.vm.allowed_synced_folder_types = :rsync
-
-    # Following the lab instructions should lead you to provide values
-    # appropriate for your environment for the configuration variable
-    # assignments preceded by double-hashes in the remainder of this
-    # :aws configuration section.
-
-    # The keypair_name parameter tells Amazon which public key to use.
-    aws.keypair_name = "cosc349-l"
-    # The private_key_path is a file location in your macOS account
-    # (e.g., ~/.ssh/something).
-    override.ssh.private_key_path = "~/.ssh/cosc349-l.pem"
-
-    # Choose your Amazon EC2 instance type (t2.micro is cheap).
-    aws.instance_type = "t2.micro"
-
-    # You need to indicate the list of security groups your VM should
-    # be in. Each security group will be of the form "sg-...", and
-    # they should be comma-separated (if you use more than one) within
-    # square brackets.
-    #
-    aws.security_groups = ["sg-00f266d3bdade44a0"]
-
-    # For Vagrant to deploy to EC2 for Amazon Educate accounts, it
-    # seems that a specific availability_zone needs to be selected
-    # (will be of the form "us-east-1a"). The subnet_id for that
-    # availability_zone needs to be included, too (will be of the form
-    # "subnet-...").
-    aws.availability_zone = "us-east-1a"
-    aws.subnet_id = "subnet-ceb3ce83"
-
-
-    # You need to chose the AMI (i.e., hard disk image) to use. This
-    # will be of the form "ami-...".
-    # 
-    # If you want to use Ubuntu Linux, you can discover the official
-    # Ubuntu AMIs: https://cloud-images.ubuntu.com/locator/ec2/
-    #
-    # You need to get the region correct, and the correct form of
-    # configuration (probably amd64, hvm:ebs-ssd, hvm).
-    #
-    # AMI = bionic, us-east-1, amd64, hvm, ebs
-    aws.ami = "ami-013da1cc4ae87618c"
-
-    # If using Ubuntu, you probably also need to uncomment the line
-    # below, so that Vagrant connects using username "ubuntu".
-    override.ssh.username = "ubuntu"
-  end
-
-  # Enable provisioning with a shell script. Additional provisioners such as
-  # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
-  # documentation for more information about their specific syntax and use.
-  config.vm.provision "shell", inline: <<-SHELL
+  # VM # 1: The Webserver
+  config.vm.define "webserver" do |webserver|
+    webserver.vm.provider :aws do |aws, override|
+      aws.region = "us-east-1"
+      override.nfs.functional = false
+        override.vm.allowed_synced_folder_types = :rsync
+        aws.keypair_name = "cosc349-l"
+        override.ssh.private_key_path = "~/.ssh/cosc349-l.pem"
+        aws.instance_type = "t2.micro"
+        aws.security_groups = ["sg-00f266d3bdade44a0"]
+        aws.availability_zone = "us-east-1a"
+        aws.subnet_id = "subnet-ceb3ce83"
+        aws.ami = "ami-013da1cc4ae87618c"
+        override.ssh.username = "ubuntu"
+    end
+    webserver.vm.provision "shell", inline: <<-SHELL
       apt-get update
 
       # Install apache for frontend
@@ -114,5 +55,40 @@ Vagrant.configure("2") do |config|
       wget -O /etc/birdimages/2.jpg https://www.birdwatchersdigest.com/bwdsite/wp-content/uploads/2018/06/Limpkin1-600.jpg
       wget -O /etc/birdimages/3.jpg https://live.staticflickr.com/7812/32127525697_ce93af4f5f_b.jpg
 
-  SHELL
+    SHELL
+  end
+
+  # VM # 2: The AIserver
+  config.vm.define "aiserver" do |aiserver|
+    aiserver.vm.provider :aws do |aws, override|
+      aws.region = "us-east-1"
+      override.nfs.functional = false
+        override.vm.allowed_synced_folder_types = :rsync
+        aws.keypair_name = "cosc349-l"
+        override.ssh.private_key_path = "~/.ssh/cosc349-l.pem"
+        aws.instance_type = "t2.micro"
+        aws.security_groups = ["sg-00f266d3bdade44a0"]
+        aws.availability_zone = "us-east-1a"
+        aws.subnet_id = "subnet-ceb3ce83"
+        aws.ami = "ami-013da1cc4ae87618c"
+        override.ssh.username = "ubuntu"
+    end
+    aiserver.vm.provision "shell", inline: <<-SHELL
+      apt-get update
+
+      # Install pip to install python packages
+      apt-get install -y python3-pip
+
+      #Install python packahes
+      pip3 install pillow
+      pip3 install numpy
+      pip3 install "https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp36-cp36m-linux_x86_64.whl"
+      pip3 install flask
+
+      # Run classifier model server. 
+      # Nohup so it doesn't after vagrant stops the provisioning shell
+      # Redirect output to stop blocking the shell
+      nohup python3 /vagrant/classifier/run-model.py &> /dev/null &
+    SHELL
+  end
 end
