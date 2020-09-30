@@ -17,19 +17,26 @@ Vagrant.configure("2") do |config|
   # VM # 1: The Webserver
   config.vm.define "webserver" do |webserver|
     webserver.vm.provider :aws do |aws, override|
+      # Set the VM name for AWS console.
       aws.tags = {'Name' => "Weberver"}
       aws.region = "us-east-1"
       override.nfs.functional = false
-        override.vm.allowed_synced_folder_types = :rsync
-        aws.keypair_name = "cosc349-l"
-        aws.private_ip_address = "172.31.16.11"
-        override.ssh.private_key_path = "~/.ssh/cosc349-l.pem"
-        aws.instance_type = "t2.micro"
-        aws.security_groups = ["sg-00f266d3bdade44a0"]
-        aws.availability_zone = "us-east-1a"
-        aws.subnet_id = "subnet-ceb3ce83"
-        aws.ami = "ami-013da1cc4ae87618c"
-        override.ssh.username = "ubuntu"
+      override.vm.allowed_synced_folder_types = :rsync
+      # keypair name for SSH
+      aws.keypair_name = "cosc349-l"
+      # Static private to communicate between VMs once deployed.
+      aws.private_ip_address = "172.31.16.11"
+      # Location of keypair file
+      override.ssh.private_key_path = "~/.ssh/cosc349-l.pem"
+      # type of EC2 instance in AWS
+      aws.instance_type = "t2.micro"
+      # Security group containing inbound/outbound rules
+      aws.security_groups = ["sg-00f266d3bdade44a0"]
+      aws.availability_zone = "us-east-1a"
+      aws.subnet_id = "subnet-ceb3ce83"
+      # AMI (like Vagrant Box): bionic, amd64, hvm, ebs
+      aws.ami = "ami-013da1cc4ae87618c"
+      override.ssh.username = "ubuntu"
     end
     webserver.vm.provision "shell", inline: <<-SHELL
       apt-get update
@@ -65,19 +72,26 @@ Vagrant.configure("2") do |config|
   # VM # 2: The AIserver
   config.vm.define "aiserver" do |aiserver|
     aiserver.vm.provider :aws do |aws, override|
+      # Set the VM name for AWS console.
       aws.tags = {'Name' => "AIserver"}
       aws.region = "us-east-1"
       override.nfs.functional = false
-        override.vm.allowed_synced_folder_types = :rsync
-        aws.keypair_name = "cosc349-l"
-        aws.private_ip_address = "172.31.16.13"
-        override.ssh.private_key_path = "~/.ssh/cosc349-l.pem"
-        aws.instance_type = "t2.micro"
-        aws.security_groups = ["sg-00f266d3bdade44a0"]
-        aws.availability_zone = "us-east-1a"
-        aws.subnet_id = "subnet-ceb3ce83"
-        aws.ami = "ami-013da1cc4ae87618c"
-        override.ssh.username = "ubuntu"
+      override.vm.allowed_synced_folder_types = :rsync
+      # keypair name for SSH
+      aws.keypair_name = "cosc349-l"
+      # Static private ip for Webserver to connect to
+      aws.private_ip_address = "172.31.16.13"
+      # Location of keypair file
+      override.ssh.private_key_path = "~/.ssh/cosc349-l.pem"
+      # type of EC2 instance in AWS
+      aws.instance_type = "t2.micro"
+      # Security group containing inbound/outbound rules
+      aws.security_groups = ["sg-00f266d3bdade44a0"]
+      aws.availability_zone = "us-east-1a"
+      aws.subnet_id = "subnet-ceb3ce83"
+      # AMI (like Vagrant Box): bionic, amd64, hvm, ebs
+      aws.ami = "ami-013da1cc4ae87618c"
+      override.ssh.username = "ubuntu"
     end
     aiserver.vm.provision "shell", inline: <<-SHELL
       apt-get update
