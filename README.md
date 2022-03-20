@@ -1,6 +1,13 @@
 # AI-Birdwatcher-Diary
 Easier way of keeping record of your bird sightings by automatically recognizing the species from their images and storing them in a database.
 
+## Preview
+
+Video demonstration of what deploying the project would look like on AWS.
+
+[![Demonstration](https://img.youtube.com/vi/VH4VKRG42l0/0.jpg)](https://www.youtube.com/watch?v=VH4VKRG42l0)
+
+
 ## Requirements 
 You need: 
 - Vagrant
