@@ -1,3 +1,5 @@
+
+
 # AI-Birdwatcher-Diary
 Easier way of keeping record of your bird sightings by automatically recognizing the species from their images and storing them in a database.
 
@@ -13,6 +15,12 @@ You need:
 - Vagrant
 - vagrant-aws plugin
 - Git (optional)
+
+## Design
+(Read aws-report.pdf for detailed info)
+
+![image](https://user-images.githubusercontent.com/22624761/196929947-b58de206-b63d-4f29-ae02-7d25e156e5df.png)
+
 
 ## Deploying
 
